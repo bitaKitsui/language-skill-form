@@ -12,7 +12,13 @@ const { label, type, color } = toRefs(props)
 </script>
 
 <template>
-  <button :type="type" :color="color">
+  <button :type="type" :color="color" class="button">
     {{ label }}
   </button>
 </template>
+
+<style scoped>
+.button {
+  cursor: pointer;
+}
+</style>

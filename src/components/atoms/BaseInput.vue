@@ -5,16 +5,20 @@ interface Props {
   label: string
   id: string
   type: HTMLInputElement
+  width: string
 }
 
 const props = defineProps<Props>()
-const { label, id, type } = toRefs(props)
+const { label, id, type, width } = toRefs(props)
 </script>
 
 <template>
   <div class="input">
     <label :for="id" class="label">{{ label }}</label>
-    <input :id="id" :type="type" />
+    <div>
+      <input :id="id" :type="type" :style="{ width }" />
+      <span>点</span>
+    </div>
   </div>
 </template>
 

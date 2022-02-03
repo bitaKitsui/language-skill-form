@@ -16,10 +16,17 @@ import './styles/reset.css'
 
 input {
   border: 1px solid;
+  border-radius: 5px;
+  height: 30px;
 }
 
 select {
-  border: 1px solid;
+  width: 100%;
+  height: 30px;
+  appearance: none;
+  background: none;
+  border: none;
+  line-height: 30px;
 }
 
 button {

@@ -8,8 +8,8 @@ import BaseButton from '../atoms/BaseButton.vue'
 
 <template>
   <div class="other-language-wrapper">
-    <BaseTitle :value="'語学力（その他言語）'" />
-    <form>
+    <BaseTitle :value="'語学力（その他言語）'" :width="'200px'" />
+    <form class="other-language-form">
       <BaseIconButton
         :label="'削除'"
         :type="'button'"
@@ -21,11 +21,14 @@ import BaseButton from '../atoms/BaseButton.vue'
         :label="'言語'"
         :name="'select-language'"
         :options="LANGUAGE_SELECTS"
-      /><BaseSelect
+        :width="'200px'"
+      />
+      <BaseSelect
         :id="'level'"
         :label="'レベル'"
         :name="'select-level'"
         :options="LANGUAGE_LEVEL_SELECTS"
+        :width="'200px'"
       />
       <div class="buttons">
         <BaseIconButton
@@ -44,6 +47,11 @@ import BaseButton from '../atoms/BaseButton.vue'
 .other-language-wrapper {
   display: flex;
   height: auto;
+}
+
+.other-language-form {
+  width: 600px;
+  border: 1px solid;
 }
 
 .buttons {

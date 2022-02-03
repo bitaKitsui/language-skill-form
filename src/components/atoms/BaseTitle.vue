@@ -3,14 +3,15 @@ import { toRefs } from 'vue'
 
 interface Props {
   value: string
+  width: string
 }
 
 const props = defineProps<Props>()
-const { value } = toRefs(props)
+const { value, width } = toRefs(props)
 </script>
 
 <template>
-  <p class="title">
+  <p class="title" :style="{ width }">
     {{ value }}
   </p>
 </template>

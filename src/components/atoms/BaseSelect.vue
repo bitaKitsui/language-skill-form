@@ -6,30 +6,55 @@ interface Props {
   id: string
   name: string
   options: string[]
+  width: string
 }
 
 const props = defineProps<Props>()
-const { label, id, options } = toRefs(props)
+const { label, id, options, width } = toRefs(props)
 </script>
 
 <template>
-  <div class="select">
+  <div class="select-wrapper" :style="{ width }">
     <label :for="id" class="label">{{ label }}</label>
-    <select :id="id" :name="name">
-      <option v-for="(option, index) in options" :key="index" :value="option">
-        {{ option }}
-      </option>
-    </select>
+    <div class="select">
+      <select :id="id" :name="name">
+        <option v-for="(option, index) in options" :key="index" :value="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.select {
+.select-wrapper {
   display: flex;
   flex-direction: column;
 }
 
 .label {
   color: #818181;
+}
+
+.select {
+  cursor: pointer;
+  padding-left: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.select::after {
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 8px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  border-bottom: 2px solid #818181;
+  border-right: 2px solid #818181;
+  z-index: -1;
 }
 </style>
