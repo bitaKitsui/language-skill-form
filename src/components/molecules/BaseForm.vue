@@ -23,7 +23,7 @@ import { LANGUAGE_LEVEL_SELECTS } from '../../constants'
   </div>
 </template>
 
-<style>
+<style scoped>
 .wrapper {
   display: flex;
 }
