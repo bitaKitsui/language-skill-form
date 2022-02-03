@@ -4,15 +4,10 @@ import BaseOtherLanguageForm from '../molecules/BaseOtherLanguageForm.vue'
 </script>
 
 <template>
-  <div class="wrapper">
+  <div>
     <BaseForm />
     <BaseOtherLanguageForm />
   </div>
 </template>
 
-<style scoped>
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-}
-</style>
+<style scoped></style>

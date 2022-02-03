@@ -7,4 +7,22 @@ import './styles/reset.css'
   <LanguageSkillForm />
 </template>
 
-<style></style>
+<style>
+#app {
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+}
+
+input {
+  border: 1px solid;
+}
+
+select {
+  border: 1px solid;
+}
+
+button {
+  border: 1px solid;
+}
+</style>
