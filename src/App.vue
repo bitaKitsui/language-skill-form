@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import BaseForm from './components/molecules/BaseForm.vue'
-import BaseOtherLanguageForm from './components/molecules/BaseOtherLanguageForm.vue'
+import LanguageSkillForm from './components/templates/LanguageSkillForm.vue'
+import './styles/reset.css'
 </script>
 
 <template>
-  <BaseForm />
-  <BaseOtherLanguageForm />
+  <LanguageSkillForm />
 </template>
 
 <style></style>

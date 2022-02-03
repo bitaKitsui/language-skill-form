@@ -6,7 +6,7 @@ import { LANGUAGE_LEVEL_SELECTS } from '../../constants'
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="form-wrapper">
     <BaseTitle :value="'語学力（英語）'" />
     <form class="form">
       <BaseSelect
@@ -24,8 +24,9 @@ import { LANGUAGE_LEVEL_SELECTS } from '../../constants'
 </template>
 
 <style scoped>
-.wrapper {
+.form-wrapper {
   display: flex;
+  height: auto;
 }
 
 .form {

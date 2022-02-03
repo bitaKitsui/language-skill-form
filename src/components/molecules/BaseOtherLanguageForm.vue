@@ -7,7 +7,7 @@ import BaseButton from '../atoms/BaseButton.vue'
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="other-language-wrapper">
     <BaseTitle :value="'語学力（その他言語）'" />
     <form>
       <BaseIconButton
@@ -41,8 +41,9 @@ import BaseButton from '../atoms/BaseButton.vue'
 </template>
 
 <style scoped>
-.wrapper {
+.other-language-wrapper {
   display: flex;
+  height: auto;
 }
 
 .buttons {
