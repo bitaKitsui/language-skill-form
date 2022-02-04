@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BaseForm from '../molecules/BaseForm.vue'
-import BaseOtherLanguageForm from '../molecules/BaseOtherLanguageForm.vue'
+import BaseForm from '../organisms/BaseForm.vue'
+import BaseOtherLanguageForm from '../organisms/BaseOtherLanguageForm.vue'
 </script>
 
 <template>

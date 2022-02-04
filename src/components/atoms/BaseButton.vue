@@ -5,14 +5,15 @@ interface Props {
   label: string
   type: HTMLButtonElement
   color: 'primary' | 'error' | 'disabled'
+  width: string
 }
 
 const props = defineProps<Props>()
-const { label, type, color } = toRefs(props)
+const { label, type, color, width } = toRefs(props)
 </script>
 
 <template>
-  <button :type="type" :color="color" class="button">
+  <button :type="type" class="button">
     {{ label }}
   </button>
 </template>
@@ -20,5 +21,8 @@ const { label, type, color } = toRefs(props)
 <style scoped>
 .button {
   cursor: pointer;
+  width: v-bind(width);
+  text-align: center;
+  border-radius: 4px;
 }
 </style>
