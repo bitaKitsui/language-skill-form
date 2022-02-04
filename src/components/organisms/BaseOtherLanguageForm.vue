@@ -5,6 +5,7 @@ import BaseIconButton from '../atoms/BaseIconButton.vue'
 import BaseSelect from '../atoms/BaseSelect.vue'
 import BaseButton from '../atoms/BaseButton.vue'
 import { LANGUAGE_SELECTS, LANGUAGE_LEVEL_SELECTS } from '../../constants'
+import BaseButtons from '../molecules/BaseButtons.vue'
 
 interface Props {
   width: string
@@ -45,21 +46,7 @@ const { width } = toRefs(props)
           />
         </div>
       </div>
-      <div class="buttons">
-        <BaseIconButton
-          :label="'言語を追加'"
-          :type="'button'"
-          :color="'primary'"
-          :outlined="true"
-          :width="'150px'"
-        />
-        <BaseButton
-          :label="'送信'"
-          :type="'submit'"
-          :color="'primary'"
-          :width="'100px'"
-        />
-      </div>
+      <BaseButtons />
     </form>
   </div>
 </template>
@@ -88,9 +75,5 @@ const { width } = toRefs(props)
 
 .form-selects {
   padding: 20px;
-}
-
-.buttons {
-  display: flex;
 }
 </style>
