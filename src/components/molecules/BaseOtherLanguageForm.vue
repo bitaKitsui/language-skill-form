@@ -8,7 +8,7 @@ import BaseButton from '../atoms/BaseButton.vue'
 
 <template>
   <div class="other-language-wrapper">
-    <BaseTitle :value="'語学力（その他言語）'" :width="'200px'" />
+    <BaseTitle :value="'語学力（その他言語）'" :width="'300px'" />
     <form class="other-language-form">
       <BaseIconButton
         :label="'削除'"
@@ -50,7 +50,7 @@ import BaseButton from '../atoms/BaseButton.vue'
 }
 
 .other-language-form {
-  width: 600px;
+  width: 800px;
   border: 1px solid;
 }
 

@@ -7,7 +7,7 @@ import { LANGUAGE_LEVEL_SELECTS } from '../../constants'
 
 <template>
   <div class="form-wrapper">
-    <BaseTitle :value="'語学力（英語）'" :width="'200px'" />
+    <BaseTitle :value="'語学力（英語）'" :width="'300px'" />
     <form class="form">
       <BaseSelect
         :id="'level'"
@@ -43,6 +43,6 @@ import { LANGUAGE_LEVEL_SELECTS } from '../../constants'
   display: flex;
   justify-content: space-between;
   border: 1px solid;
-  width: 500px;
+  width: 650px;
 }
 </style>
