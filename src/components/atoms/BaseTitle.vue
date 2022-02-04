@@ -11,7 +11,7 @@ const { value, width } = toRefs(props)
 </script>
 
 <template>
-  <p class="title" :style="{ width }">
+  <p class="title">
     {{ value }}
   </p>
 </template>
@@ -19,5 +19,6 @@ const { value, width } = toRefs(props)
 <style scoped>
 .title {
   color: #818181;
+  width: v-bind(width);
 }
 </style>

@@ -5,8 +5,8 @@ import BaseOtherLanguageForm from '../molecules/BaseOtherLanguageForm.vue'
 
 <template>
   <div class="wrapper">
-    <BaseForm />
-    <BaseOtherLanguageForm />
+    <BaseForm :width="'650px'" />
+    <BaseOtherLanguageForm :width="'800px'" />
   </div>
 </template>
 

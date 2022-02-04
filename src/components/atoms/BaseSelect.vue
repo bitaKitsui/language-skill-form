@@ -14,7 +14,7 @@ const { label, id, options, width } = toRefs(props)
 </script>
 
 <template>
-  <div class="select-wrapper" :style="{ width }">
+  <div class="select-wrapper">
     <label :for="id" class="label">{{ label }}</label>
     <div class="select">
       <select :id="id" :name="name">
@@ -30,6 +30,7 @@ const { label, id, options, width } = toRefs(props)
 .select-wrapper {
   display: flex;
   flex-direction: column;
+  width: v-bind(width);
 }
 
 .label {

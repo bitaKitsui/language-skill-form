@@ -1,9 +1,17 @@
 <script setup lang="ts">
+import { toRefs } from 'vue'
 import BaseTitle from '../atoms/BaseTitle.vue'
 import BaseIconButton from '../atoms/BaseIconButton.vue'
 import BaseSelect from '../atoms/BaseSelect.vue'
-import { LANGUAGE_SELECTS, LANGUAGE_LEVEL_SELECTS } from '../../constants'
 import BaseButton from '../atoms/BaseButton.vue'
+import { LANGUAGE_SELECTS, LANGUAGE_LEVEL_SELECTS } from '../../constants'
+
+interface Props {
+  width: string
+}
+
+const props = defineProps<Props>()
+const { width } = toRefs(props)
 </script>
 
 <template>
@@ -50,7 +58,7 @@ import BaseButton from '../atoms/BaseButton.vue'
 }
 
 .other-language-form {
-  width: 800px;
+  width: v-bind(width);
   border: 1px solid;
 }
 
