@@ -2,10 +2,8 @@
 import { toRefs } from 'vue'
 import BaseTitle from '../atoms/BaseTitle.vue'
 import BaseIconButton from '../atoms/BaseIconButton.vue'
-import BaseSelect from '../atoms/BaseSelect.vue'
-import BaseButton from '../atoms/BaseButton.vue'
-import { LANGUAGE_SELECTS, LANGUAGE_LEVEL_SELECTS } from '../../constants'
 import BaseButtons from '../molecules/BaseButtons.vue'
+import BaseSelects from '../molecules/BaseSelects.vue'
 
 interface Props {
   width: string
@@ -29,22 +27,7 @@ const { width } = toRefs(props)
             :width="'60px'"
           />
         </div>
-        <div class="form-selects">
-          <BaseSelect
-            :id="'language'"
-            :label="'言語'"
-            :name="'select-language'"
-            :options="LANGUAGE_SELECTS"
-            :width="'200px'"
-          />
-          <BaseSelect
-            :id="'level'"
-            :label="'レベル'"
-            :name="'select-level'"
-            :options="LANGUAGE_LEVEL_SELECTS"
-            :width="'200px'"
-          />
-        </div>
+        <BaseSelects />
       </div>
       <BaseButtons />
     </form>
@@ -71,9 +54,5 @@ const { width } = toRefs(props)
   background: #769dbb;
   display: flex;
   justify-content: flex-end;
-}
-
-.form-selects {
-  padding: 20px;
 }
 </style>
