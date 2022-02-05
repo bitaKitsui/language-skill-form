@@ -52,7 +52,6 @@ const { width } = toRefs(props)
 .form {
   display: flex;
   justify-content: space-between;
-  border: 1px solid;
   width: v-bind(width);
 }
 </style>
