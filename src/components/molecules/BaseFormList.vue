@@ -13,7 +13,7 @@ const { listItem } = toRefs(props)
 
 <template>
   <ul class="form-list">
-    <li v-for="(item, index) in listItem" :key="index" class="list-border">
+    <li v-for="item in listItem" :key="item" class="list-border">
       <div class="list-header">
         <BaseIconButton
           :label="'削除'"
