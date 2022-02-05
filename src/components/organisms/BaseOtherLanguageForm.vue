@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { toRefs } from 'vue'
+import { reactive, toRefs } from 'vue'
 import BaseTitle from '../atoms/BaseTitle.vue'
 import BaseButtons from '../molecules/BaseButtons.vue'
 import BaseFormList from '../molecules/BaseFormList.vue'
@@ -10,14 +10,22 @@ interface Props {
 
 const props = defineProps<Props>()
 const { width } = toRefs(props)
+
+const listItem = reactive([1])
+
+const addListItem = () => listItem.push(listItem.length + 1)
+
+const handleClick = () => {
+  addListItem()
+}
 </script>
 
 <template>
   <div class="other-language-wrapper">
     <BaseTitle :value="'語学力（その他言語）'" :width="'300px'" />
     <form class="other-language-form">
-      <BaseFormList />
-      <BaseButtons />
+      <BaseFormList :list-item="listItem" />
+      <BaseButtons @click="handleClick" />
     </form>
   </div>
 </template>

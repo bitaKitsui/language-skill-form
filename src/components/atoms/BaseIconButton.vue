@@ -10,6 +10,11 @@ interface Props {
   width: string
 }
 
+interface Emits {
+  (event: 'add'): void
+  (event: 'remove'): void
+}
+
 const props = defineProps<Props>()
 const { label, icon, type, color, outlined, width } = toRefs(props)
 
@@ -19,10 +24,17 @@ const classObject = computed(() => {
     text: !outlined.value,
   }
 })
+
+const emits = defineEmits<Emits>()
+
+const onClick = () => {
+  if (label.value === '削除') emits('remove')
+  if (label.value === '言語を追加') emits('add')
+}
 </script>
 
 <template>
-  <button :type="type" :class="['icon-button', classObject]">
+  <button :type="type" :class="['icon-button', classObject]" @click="onClick">
     <span>{{ icon }}</span>
     <span>
       {{ label }}

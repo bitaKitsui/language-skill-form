@@ -1,14 +1,20 @@
 <script setup lang="ts">
+import { toRefs } from 'vue'
 import BaseIconButton from '../atoms/BaseIconButton.vue'
 import BaseSelects from '../molecules/BaseSelects.vue'
 
-const items = [1]
+interface Props {
+  listItem: number[]
+}
+
+const props = defineProps<Props>()
+const { listItem } = toRefs(props)
 </script>
 
 <template>
   <ul class="form-list">
-    <li v-for="(item, index) in items" :key="index" class="form-border">
-      <div class="form-header">
+    <li v-for="(item, index) in listItem" :key="index" class="list-border">
+      <div class="list-header">
         <BaseIconButton
           :label="'削除'"
           :icon="'×'"
@@ -30,12 +36,12 @@ const items = [1]
   list-style: none;
 }
 
-.form-border {
+.list-border {
   border: 1px solid #3d60d5;
   margin-bottom: 20px;
 }
 
-.form-header {
+.list-header {
   width: 100%;
   height: 40px;
   background: #f2f3f7;

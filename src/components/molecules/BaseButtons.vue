@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import BaseIconButton from '../atoms/BaseIconButton.vue'
 import BaseButton from '../atoms/BaseButton.vue'
+
+interface Emits {
+  (event: 'add'): void
+}
+
+const emits = defineEmits<Emits>()
+
+const handleClick = () => {
+  emits('add')
+}
 </script>
 
 <template>
@@ -13,6 +23,7 @@ import BaseButton from '../atoms/BaseButton.vue'
         :color="'primary'"
         :outlined="true"
         :width="'150px'"
+        @add="handleClick"
       />
     </div>
     <BaseButton
