@@ -46,6 +46,7 @@ const { width } = toRefs(props)
 
 .form-border {
   border: 1px solid #3d60d5;
+  margin-bottom: 20px;
 }
 
 .form-header {
