@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import BaseIconButton from '../atoms/BaseIconButton.vue'
 import BaseSelects from '../molecules/BaseSelects.vue'
+
+const items = [1]
 </script>
 
 <template>
   <ul class="form-list">
-    <li class="form-border">
+    <li v-for="(item, index) in items" :key="index" class="form-border">
       <div class="form-header">
         <BaseIconButton
           :label="'削除'"
