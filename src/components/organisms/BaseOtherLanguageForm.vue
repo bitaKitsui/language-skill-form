@@ -21,10 +21,11 @@ const { width } = toRefs(props)
         <div class="form-header">
           <BaseIconButton
             :label="'削除'"
+            :icon="'×'"
             :type="'button'"
             color="'primary'"
             :outlined="false"
-            :width="'60px'"
+            :width="'80px'"
           />
         </div>
         <BaseSelects :height="'170px'" />

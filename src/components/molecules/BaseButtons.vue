@@ -8,6 +8,7 @@ import BaseButton from '../atoms/BaseButton.vue'
     <div class="buttons__icon-button">
       <BaseIconButton
         :label="'言語を追加'"
+        :icon="'+'"
         :type="'button'"
         :color="'primary'"
         :outlined="true"
@@ -26,6 +27,7 @@ import BaseButton from '../atoms/BaseButton.vue'
 <style scoped>
 .buttons {
   display: flex;
+  height: 40px;
 }
 
 .buttons__icon-button {

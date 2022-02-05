@@ -24,5 +24,6 @@ const { label, type, color, width } = toRefs(props)
   width: v-bind(width);
   text-align: center;
   border-radius: 4px;
+  height: 100%;
 }
 </style>
