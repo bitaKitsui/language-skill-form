@@ -6,10 +6,11 @@ interface Props {
   id: string
   type: HTMLInputElement
   width: string
+  rightMargin: string
 }
 
 const props = defineProps<Props>()
-const { label, id, type, width } = toRefs(props)
+const { label, id, type, width, rightMargin } = toRefs(props)
 </script>
 
 <template>
@@ -34,5 +35,6 @@ const { label, id, type, width } = toRefs(props)
 
 .input {
   width: v-bind(width);
+  margin-right: v-bind(rightMargin);
 }
 </style>

@@ -29,12 +29,14 @@ const { width } = toRefs(props)
         :label="'TOEIC'"
         :type="'text'"
         :width="'80px'"
+        :right-margin="'10px'"
       />
       <BaseInput
         :id="'toefl'"
         :label="'TOEFL'"
         :type="'text'"
         :width="'80px'"
+        :right-margin="'10px'"
       />
     </form>
   </div>
