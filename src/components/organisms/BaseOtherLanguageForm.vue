@@ -27,7 +27,7 @@ const { width } = toRefs(props)
             :width="'60px'"
           />
         </div>
-        <BaseSelects />
+        <BaseSelects :height="'170px'" />
       </div>
       <BaseButtons />
     </form>
