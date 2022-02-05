@@ -35,16 +35,17 @@ const classObject = computed(() => {
   border: none;
   width: v-bind(width);
   text-align: center;
+  color: #3d60d5;
 }
 
 .icon-button:hover {
-  border: 1px solid #056394;
+  border: 1px solid #3d60d5;
 }
 
 .icon-button--outlined {
-  border: 1px solid #056394;
+  border: 1px solid #3d60d5;
   border-radius: 4px;
-  color: #056394;
+  color: #3d60d5;
   cursor: pointer;
   width: v-bind(width);
   text-align: center;
