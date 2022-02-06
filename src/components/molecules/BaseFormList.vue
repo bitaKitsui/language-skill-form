@@ -7,8 +7,18 @@ interface Props {
   listItem: number[]
 }
 
+interface Emits {
+  (event: 'remove', key: number): void
+}
+
 const props = defineProps<Props>()
 const { listItem } = toRefs(props)
+
+const emits = defineEmits<Emits>()
+
+const handleClick = (key: number) => {
+  emits('remove', key)
+}
 </script>
 
 <template>
@@ -22,6 +32,7 @@ const { listItem } = toRefs(props)
           color="'primary'"
           :outlined="false"
           :width="'80px'"
+          @remove="handleClick(item)"
         />
       </div>
       <BaseSelects :height="'170px'" />

@@ -15,8 +15,9 @@ const listItem = reactive([1])
 
 const addListItem = () => listItem.push(listItem.length + 1)
 
-const handleClick = () => {
-  addListItem()
+const removeListItem = (key: number) => {
+  if (listItem.length === 1) return
+  // ボタンを押すと削除する機能
 }
 </script>
 
@@ -24,8 +25,8 @@ const handleClick = () => {
   <div class="other-language-wrapper">
     <BaseTitle :value="'語学力（その他言語）'" :width="'300px'" />
     <form class="other-language-form">
-      <BaseFormList :list-item="listItem" />
-      <BaseButtons @click="handleClick" />
+      <BaseFormList :list-item="listItem" @remove="removeListItem" />
+      <BaseButtons @add="addListItem" />
     </form>
   </div>
 </template>
