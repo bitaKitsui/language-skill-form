@@ -48,8 +48,12 @@ const handleClick = (key: number) => {
 }
 
 .list-border {
-  border: 1px solid #3d60d5;
+  border: 1px solid lightgray;
   margin-bottom: 20px;
+}
+
+.list-border:hover {
+  border: 1px solid #3d60d5;
 }
 
 .list-header {
